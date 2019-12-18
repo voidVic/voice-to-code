@@ -1,0 +1,25 @@
+{
+    "blockAction": [
+        {"q": "for loop", "a": "{\"isNew\": \"true\", \"what\":\"for\"}"},
+        {"q": "write for loop", "a": "{\"isNew\": true, \"what\":\"for\"}"},
+        {"q": "make for loop", "a": "{\"isNew\": true, \"what\":\"for\"}"},
+
+
+        {"q": "make if statement", "a": "{\"isNew\": true, \"what\":\"if\"}"},
+        {"q": "write if statement", "a": "{\"isNew\": true, \"what\":\"if\"}"},
+
+
+        {"q": "create variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+        {"q": "create a variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+        {"q": "declare variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+        {"q": "declare a variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+        {"q": "define variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+        {"q": "define a variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
+
+        
+        {"q": "go to line", "a": "{\"what\":\"goto\"}"},
+        {"q": "go to line number", "a": "{\"what\":\"goto\"}"},
+        {"q": "line", "a": "{\"what\":\"goto\"}"}
+
+    ]
+}

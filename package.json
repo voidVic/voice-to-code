@@ -1,0 +1,27 @@
+{
+  "name": "voice-to-code",
+  "version": "1.0.0",
+  "description": "Converts english like text commands to javascript code",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.15.0",
+    "config": "^1.28.1",
+    "cookie-parser": "*",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "js-beautify": "^1.10.2",
+    "lodash": "*",
+    "natural": "^0.5.4",
+    "natural-brain": "*",
+    "python-shell": "^0.4.0",
+    "request": "^2.72.0",
+    "serial": "0.0.9",
+    "words-to-numbers": "^1.5.1"
+  },
+  "author": "ankit Sharma (vicnwz@gmail.com)",
+  "license": "MIT"
+}
