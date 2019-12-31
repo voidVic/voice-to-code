@@ -49,7 +49,64 @@ app.controller('mainController', ['appService', function (appService) {
     var recognition;
     var lastCommand = "";
     var freshCommand = true;
-    var init = function () {
+
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+    var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+    var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
+    var recognition = new webkitSpeechRecognition();
+    //var speechRecognitionList = new SpeechGrammarList();
+    //speechRecognitionList.addFromString(grammar, 1);
+
+    //recognition.grammars = speechRecognitionList;
+    recognition.continuous = false;
+    recognition.lang = 'en-IN';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+
+    var delay = (function(){
+        var timer = 0;
+        return function(callback, ms){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+       };
+      })();
+
+    ctrl.detectStop = function(){
+        delay(function(){
+            ctrl.triggerAction();
+          }, 1000 );
+    }
+
+    recognition.onresult = function(event) {
+        var last = event.results.length - 1;
+        var text = event.results[last][0].transcript;
+        
+        console.log('text: ', text);
+      }
+
+      recognition.onspeechend = function() {
+        recognition.start();
+      }
+
+      recognition.onerror = function(event) {
+        console.log('error: ', event);
+      }
+
+      recognition.onnomatch = function(event) {
+        console.log('no match: ', event);
+      }
+
+    function init () {
+        //recognition.start();
+    }
+
+
+
+
+    var init_old = function () {
+
         ctrl.error = "";
         getDevices();
         initSpeechLong();
@@ -91,7 +148,6 @@ app.controller('mainController', ['appService', function (appService) {
         };
         recognition.onend = function () {
             if (freshCommand) {
-                console.log("restarted");
                 lastCommand = "";
                 recognition.start();
             }
@@ -103,8 +159,13 @@ app.controller('mainController', ['appService', function (appService) {
         }
 
     }
+
+
+
     var recognition, recognitionShort;
     var actionSpeech = "";
+
+
     var initSpeechLong = function () {
 
         if (!('webkitSpeechRecognition' in window)) {
@@ -138,6 +199,7 @@ app.controller('mainController', ['appService', function (appService) {
     }
 
     var haveWakeWord = function (text) {
+        console.log(text);
         if(text.toLowerCase().indexOf('vegeta') >= 0) {
             return true;
         }

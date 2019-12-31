@@ -4,9 +4,19 @@
         {"q": "write for loop", "a": "{\"isNew\": true, \"what\":\"for\"}"},
         {"q": "make for loop", "a": "{\"isNew\": true, \"what\":\"for\"}"},
 
+        
+        {"q": "pt A", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"A\"}"},
+        {"q": "pt B", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"B\"}"},
+        {"q": "pt C", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"C\"}"},
+        {"q": "part A", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"A\"}"},
+        {"q": "part B", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"B\"}"},
+        {"q": "part C", "a": "{\"isNew\": false, \"what\":\"for\", \"part\":\"C\"}"},
+
 
         {"q": "make if statement", "a": "{\"isNew\": true, \"what\":\"if\"}"},
         {"q": "write if statement", "a": "{\"isNew\": true, \"what\":\"if\"}"},
+        {"q": "change condition", "a": "{\"isNew\": false, \"what\":\"if\", \"condition\": true}"},
+        {"q": "condition", "a": "{\"isNew\": false, \"what\":\"if\", \"condition\": true}"},
 
 
         {"q": "create variable", "a": "{\"isNew\": true, \"what\":\"var\"}"},
@@ -19,7 +29,21 @@
         
         {"q": "go to line", "a": "{\"what\":\"goto\"}"},
         {"q": "go to line number", "a": "{\"what\":\"goto\"}"},
-        {"q": "line", "a": "{\"what\":\"goto\"}"}
+        {"q": "go to", "a": "{\"what\":\"goto\"}"},
+        {"q": "goto", "a": "{\"what\":\"goto\"}"},
+
+        
+        {"q": "print", "a": "{\"what\":\"print\"}"},
+
+        
+        {"q": "remove line", "a": "{\"what\":\"remLine\"}"},
+        {"q": "delete statement", "a": "{\"what\":\"remLine\"}"},
+        {"q": "delete line", "a": "{\"what\":\"remLine\"}"},
+        {"q": "remove statement", "a": "{\"what\":\"remLine\"}"},
+
+        
+        {"q": "uncategorized", "a": "{\"what\":\"uncategorized\"}"}
+
 
     ]
 }
